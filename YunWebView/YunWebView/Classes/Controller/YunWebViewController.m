@@ -619,14 +619,6 @@
     if (hType == YwvHost_md_openPhone) {
         [YunSystemMediaHelper openPhone:mdDat.mdPhone];
         return;
-
-        [YunAlertViewHelper.instance showYesNo:FORMAT(@"确认拨打电话:%@", mdDat.mdPhone) result:^(BOOL yes) {
-            if (yes) {
-                [YunSystemMediaHelper openPhone:mdDat.mdPhone];
-            }
-        }];
-
-        return;
     }
 
     if (hType == YwvHost_md_openSms) {
